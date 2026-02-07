@@ -21,7 +21,7 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <Link href="/services" className="bg-iron-blue text-white px-8 py-3 rounded hover:bg-opacity-90 transition-colors font-medium">
+            <Link href="/services" className="bg-iron-blue text-white px-8 py-3 rounded hover:bg-opacity-90 transition-colors font-medium text-center">
               Our Services
             </Link>
             <button className="bg-white border-2 border-iron-blue text-iron-blue px-8 py-3 rounded hover:bg-iron-light-blue transition-colors font-medium flex items-center space-x-2">
