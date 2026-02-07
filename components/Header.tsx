@@ -42,7 +42,7 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
         ) : (
           <>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Services</a>
+              <Link href="/services" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Services</Link>
               <a href="#compliance" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Compliance</a>
               <a href="#research" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Research</a>
               <a href="#about" className="text-iron-dark-gray hover:text-iron-blue transition-colors">About</a>

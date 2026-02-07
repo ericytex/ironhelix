@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -20,9 +21,9 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button className="bg-iron-blue text-white px-8 py-3 rounded hover:bg-opacity-90 transition-colors font-medium">
+            <Link href="/services" className="bg-iron-blue text-white px-8 py-3 rounded hover:bg-opacity-90 transition-colors font-medium">
               Our Services
-            </button>
+            </Link>
             <button className="bg-white border-2 border-iron-blue text-iron-blue px-8 py-3 rounded hover:bg-iron-light-blue transition-colors font-medium flex items-center space-x-2">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="10" cy="7" r="3" stroke="currentColor" strokeWidth="2"/>
