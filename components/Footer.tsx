@@ -62,6 +62,7 @@ export default function Footer() {
           </div>
           <div className="mt-6 space-y-2 text-sm text-slate-500">
             <p className="font-semibold text-slate-400">IRONHELIX AI TECHNOLOGIES CO. - SMC LIMITED</p>
+            <p>Registration number: [Add your company registration number]</p>
             <p>Registered office: Contact <a href="mailto:support@ironhelix.ai" className="hover:text-white transition-colors">support@ironhelix.ai</a> for address</p>
             <p><a href="mailto:support@ironhelix.ai" className="hover:text-white transition-colors">support@ironhelix.ai</a></p>
           </div>
