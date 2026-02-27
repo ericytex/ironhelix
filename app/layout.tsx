@@ -1,32 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: {
-    default: 'IRONHELIX AI - Advanced AI and Machine Learning Systems',
-    template: '%s | IRONHELIX AI'
-  },
-  description: 'Technology company focused on building and commercializing advanced AI and machine-learning systems for B2B and institutional environments.',
-  keywords: ['AI', 'Machine Learning', 'B2B Technology', 'SaaS', 'Enterprise AI', 'Institutional Technology'],
-  authors: [{ name: 'IRONHELIX AI' }],
-  creator: 'IRONHELIX AI TECHNOLOGIES CO. - SMC LIMITED',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'IRONHELIX AI',
-    title: 'IRONHELIX AI - Advanced AI and Machine Learning Systems',
-    description: 'Technology company focused on building and commercializing advanced AI and machine-learning systems for B2B and institutional environments.',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'IRONHELIX AI - Advanced AI and Machine Learning Systems',
-    description: 'Technology company focused on building and commercializing advanced AI and machine-learning systems for B2B and institutional environments.',
-  },
-  icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
-  },
+  title: 'Data Architect - Database Architecture Automation & Governance',
+  description: 'Enterprise-grade database lifecycle automation platform. Transform business logic into production-ready SQL schemas, API contracts, and zero-downtime migrations. For SaaS founders and development teams.',
 }
 
 export default function RootLayout({
@@ -36,7 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   )
 }

@@ -1,20 +1,23 @@
-import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import ProductOverview from '@/components/ProductOverview'
+import HowItWorks from '@/components/HowItWorks'
+import UseCases from '@/components/UseCases'
 import Features from '@/components/Features'
-import ResponsibleTechnology from '@/components/ResponsibleTechnology'
+import FeatureComparison from '@/components/FeatureComparison'
+import SecurityGovernance from '@/components/SecurityGovernance'
 import InstitutionalScale from '@/components/InstitutionalScale'
-import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <Header currentPage="home" />
+    <>
       <Hero />
+      <ProductOverview />
+      <HowItWorks />
+      <UseCases />
       <Features />
-      <ResponsibleTechnology />
+      <FeatureComparison />
+      <SecurityGovernance />
       <InstitutionalScale />
-      <Footer />
-    </main>
+    </>
   )
 }
-

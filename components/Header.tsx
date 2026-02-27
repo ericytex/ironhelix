@@ -1,59 +1,33 @@
 import React from 'react'
 import Link from 'next/link'
-import Logo from './Logo'
 
-interface HeaderProps {
-  currentPage?: 'home' | 'services'
-}
-
-export default function Header({ currentPage = 'home' }: HeaderProps) {
-  const isServicesPage = currentPage === 'services'
-  
+export default function Header() {
   return (
-    <header className="bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/">
-          <Logo size={40} showText={true} />
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="w-9 h-9 bg-slate-900 rounded-lg flex items-center justify-center group-hover:bg-slate-800 transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <span className="text-slate-900 text-lg font-semibold">Data Architect</span>
         </Link>
-        {isServicesPage ? (
-          <>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Solutions</Link>
-              <Link href="/services" className="text-iron-blue font-medium transition-colors">Services</Link>
-              <a href="#pricing" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Pricing</a>
-              <a href="#compliance" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Compliance</a>
-            </nav>
-            <div className="hidden md:flex items-center space-x-4">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search technology catalog..."
-                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-iron-blue"
-                />
-                <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <button className="bg-iron-blue text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
-                Request Demo
-              </button>
-            </div>
-          </>
-        ) : (
-          <>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/services" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Services</Link>
-              <a href="#compliance" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Compliance</a>
-              <a href="#research" className="text-iron-dark-gray hover:text-iron-blue transition-colors">Research</a>
-              <a href="#about" className="text-iron-dark-gray hover:text-iron-blue transition-colors">About</a>
-            </nav>
-            <button className="bg-iron-blue text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
-              Contact
-            </button>
-          </>
-        )}
+        <nav className="hidden md:flex items-center space-x-1">
+          <Link href="/#product-overview" className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors">Product</Link>
+          <Link href="/docs" className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors">Docs</Link>
+          <Link href="/pricing" className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors">Pricing</Link>
+          <Link href="/compliance" className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors">Compliance</Link>
+          <Link href="/services" className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors">Services</Link>
+          <Link href="/about" className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors">About</Link>
+        </nav>
+        <a 
+          href="mailto:sales@ironhelix.ai" 
+          className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-colors"
+        >
+          Contact Sales
+        </a>
       </div>
     </header>
   )
 }
-
